@@ -1,0 +1,9 @@
+Sub ConvertAllFormulasToValues()
+    Dim ws As Worksheet
+
+    For Each ws In ThisWorkbook.Worksheets
+        With ws.UsedRange
+            .Value = .Value
+        End With
+    Next ws
+End Sub
