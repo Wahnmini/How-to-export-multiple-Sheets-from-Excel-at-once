@@ -1,0 +1,295 @@
+Sub ExportSelectedSheets()
+    Dim ws As Worksheet
+    Dim newWB1 As Workbook
+    Dim newWB2 As Workbook
+    Dim newWB3 As Workbook
+    Dim newWB4 As Workbook
+    Dim newWB5 As Workbook
+    Dim newWB6 As Workbook
+    Dim newWB7 As Workbook
+    Dim newWB8 As Workbook
+    Dim newWB9 As Workbook
+    Dim newWB10 As Workbook
+    Dim newWB11 As Workbook
+    Dim newWB12 As Workbook
+    Dim newWB13 As Workbook
+    Dim newWB14 As Workbook
+    Dim newWB15 As Workbook
+    Dim newWB16 As Workbook
+    Dim newWB17 As Workbook
+    Dim newWB18 As Workbook
+    Dim newWB19 As Workbook
+    Dim newWB20 As Workbook
+    Dim newWB21 As Workbook
+    Dim newWB22 As Workbook
+    Dim newWB23 As Workbook
+    Dim newWB24 As Workbook
+    Dim newWD25 As Workbook
+    
+    Dim tempSheet As Worksheet
+
+    ' Create new workbooks for each group of worksheets
+    Set newWB1 = Workbooks.Add ' For "F&F" and "12901 & 12951"
+    Set newWB2 = Workbooks.Add ' For "Computer hardware" and "12931 & 12981"
+    Set newWB3 = Workbooks.Add ' For "Computer software" and "12942 & 12992"
+    Set newWB4 = Workbooks.Add ' For "Trade Debtors - External" and "15101"
+    Set newWB5 = Workbooks.Add ' For "Trade Debtors - Other Current R" and "15199"
+    Set newWB6 = Workbooks.Add ' For "Sundry Debtors - Current Deposi" and "16801"
+    Set newWB7 = Workbooks.Add ' For "Intercompany - Recharges Recove" and "17301A" and "17301B"
+    Set newWB8 = Workbooks.Add ' For "Sales Taxes Receivable-Adj" and "16101"
+    Set newWB9 = Workbooks.Add ' For "Prepayments - Other" and "16699"
+    Set newWB10 = Workbooks.Add ' For "Prepayments - Insurance Premium" and "16604"
+    Set newWB11 = Workbooks.Add ' For "Bank HSBC THB" and "19217"
+    Set newWB12 = Workbooks.Add ' For "Bank HSBC USD" and "19223"
+    Set newWB13 = Workbooks.Add ' For "Equity - Share Capital" and "29101"
+    Set newWB14 = Workbooks.Add ' For "Equity - Profit or Loss Brought" and "29201"
+    Set newWB15 = Workbooks.Add ' For "Accounts Payable - External" and "21101"
+    Set newWB16 = Workbooks.Add ' For "Intercompany - Accounts Payable" and "27101"
+    Set newWB17 = Workbooks.Add ' For "Estimated tax on earnings" and "25101"
+    Set newWB18 = Workbooks.Add ' For "Sales Taxes Payable - Adjustmen" and "22703"
+    Set newWB19 = Workbooks.Add ' For "Bonus Accrual" and "23201"
+    Set newWB20 = Workbooks.Add ' For "Withholding Tax Liability" and "25102"
+    Set newWB21 = Workbooks.Add ' For "Accruals - Miscellaneous" and "22299"
+    Set newWB22 = Workbooks.Add ' For "Accruals - Audit Fees" and "22011"
+    Set newWB23 = Workbooks.Add ' For "Accruals - Marketing" and "22501"
+    Set newWB24 = Workbooks.Add ' For "Accruals - Consultancy Fees" and "22209"
+    Set newWB25 = Workbooks.Add ' For "Provisions - Non-Current" and "24101"
+
+    ' Loop through each worksheet in the current workbook
+    For Each ws In ThisWorkbook.Worksheets
+       
+        If ws.Name = "F&F" Or ws.Name = "12901 & 12951" Then
+            ws.Copy After:=newWB1.Sheets(newWB1.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+
+        
+        If ws.Name = "Computer hardware" Or ws.Name = "12931 & 12981" Then
+            ws.Copy After:=newWB2.Sheets(newWB2.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+
+        
+        If ws.Name = "Computer software" Or ws.Name = "12942 & 12992" Then
+            ws.Copy After:=newWB3.Sheets(newWB3.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+
+       
+        If ws.Name = "Trade Debtors - External" Or ws.Name = "15101" Then
+            ws.Copy After:=newWB4.Sheets(newWB4.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Trade Debtors - Other Current R" Or ws.Name = "15199" Then
+            ws.Copy After:=newWB5.Sheets(newWB5.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Sundry Debtors - Current Deposi" Or ws.Name = "16801" Then
+            ws.Copy After:=newWB6.Sheets(newWB6.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Intercompany - Recharges Recove" Or ws.Name = "17301A" Or ws.Name = "17301B" Then
+            ws.Copy After:=newWB7.Sheets(newWB7.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Sales Taxes Receivable-Adj" Or ws.Name = "16101" Then
+            ws.Copy After:=newWB8.Sheets(newWB8.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Prepayments - Other" Or ws.Name = "16699" Then
+            ws.Copy After:=newWB9.Sheets(newWB9.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Prepayments - Insurance Premium" Or ws.Name = "16604" Then
+            ws.Copy After:=newWB10.Sheets(newWB10.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Bank HSBC THB" Or ws.Name = "19217" Then
+            ws.Copy After:=newWB11.Sheets(newWB11.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Bank HSBC USD" Or ws.Name = "19223" Then
+            ws.Copy After:=newWB12.Sheets(newWB12.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Equity - Share Capital" Or ws.Name = "29101" Then
+            ws.Copy After:=newWB13.Sheets(newWB13.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Equity - Profit or Loss Brought" Or ws.Name = "29201" Then
+            ws.Copy After:=newWB14.Sheets(newWB14.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Accounts Payable - External" Or ws.Name = "21101" Then
+            ws.Copy After:=newWB15.Sheets(newWB15.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Intercompany - Accounts Payable" Or ws.Name = "27101" Then
+            ws.Copy After:=newWB16.Sheets(newWB16.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Estimated tax on earnings" Or ws.Name = "25101" Then
+            ws.Copy After:=newWB17.Sheets(newWB17.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Sales Taxes Payable - Adjustmen" Or ws.Name = "22703" Then
+            ws.Copy After:=newWB18.Sheets(newWB18.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Bonus Accrual" Or ws.Name = "23201" Then
+            ws.Copy After:=newWB19.Sheets(newWB19.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Withholding Tax Liability" Or ws.Name = "25102" Then
+            ws.Copy After:=newWB20.Sheets(newWB20.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Accruals - Miscellaneous" Or ws.Name = "22299" Then
+            ws.Copy After:=newWB21.Sheets(newWB21.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Accruals - Audit Fees" Or ws.Name = "22011" Then
+            ws.Copy After:=newWB22.Sheets(newWB22.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Accruals - Marketing" Or ws.Name = "22501" Then
+            ws.Copy After:=newWB23.Sheets(newWB23.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Accruals - Consultancy Fees" Or ws.Name = "22209" Then
+            ws.Copy After:=newWB24.Sheets(newWB24.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+        If ws.Name = "Provisions - Non-Current" Or ws.Name = "24101" Then
+            ws.Copy After:=newWB25.Sheets(newWB25.Sheets.Count) ' Copy to the end of the new workbook
+        End If
+        
+    Next ws
+
+    ' Remove default sheets from each new workbook
+    For Each tempSheet In newWB1.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+
+    For Each tempSheet In newWB2.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+
+    For Each tempSheet In newWB3.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+
+    For Each tempSheet In newWB4.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB5.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB6.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB7.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB8.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB9.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB10.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB11.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB12.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB13.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB14.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB15.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB16.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB17.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB18.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB19.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB20.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB21.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB22.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB23.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB24.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+    
+    For Each tempSheet In newWB25.Sheets
+        If tempSheet.Name = "Sheet1" Then tempSheet.Delete
+    Next tempSheet
+
+    ' Save the workbooks with the specified filenames
+    newWB1.SaveAs Filename:="12901 & 12951.xlsx"
+    newWB2.SaveAs Filename:="12931 & 12981.xlsx"
+    newWB3.SaveAs Filename:="12942 & 12992.xlsx"
+    newWB4.SaveAs Filename:="15101.xlsx"
+    newWB5.SaveAs Filename:="15199.xlsx"
+    newWB6.SaveAs Filename:="16801.xlsx"
+    newWB7.SaveAs Filename:="17301.xlsx"
+    newWB8.SaveAs Filename:="16101.xlsx"
+    newWB9.SaveAs Filename:="16699.xlsx"
+    newWB10.SaveAs Filename:="16604.xlsx"
+    newWB11.SaveAs Filename:="19217.xlsx"
+    newWB12.SaveAs Filename:="19223.xlsx"
+    newWB13.SaveAs Filename:="29101.xlsx"
+    newWB14.SaveAs Filename:="29201.xlsx"
+    newWB15.SaveAs Filename:="21101.xlsx"
+    newWB16.SaveAs Filename:="27101.xlsx"
+    newWB17.SaveAs Filename:="25101.xlsx"
+    newWB18.SaveAs Filename:="22703.xlsx"
+    newWB19.SaveAs Filename:="23201.xlsx"
+    newWB20.SaveAs Filename:="25102.xlsx"
+    newWB21.SaveAs Filename:="22299.xlsx"
+    newWB22.SaveAs Filename:="22011.xlsx"
+    newWB23.SaveAs Filename:="22501.xlsx"
+    newWB24.SaveAs Filename:="22209.xlsx"
+    newWB25.SaveAs Filename:="24101.xlsx"
+    
+End Sub
+
